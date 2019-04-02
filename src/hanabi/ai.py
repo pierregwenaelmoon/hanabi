@@ -118,3 +118,19 @@ class Cheater(AI):
         print('Cheater is doomed and must discard:', act, myprecious)
         return act
 
+
+class Random(AI):
+    # Joue au hasard #
+
+    def play(self):
+        "Return the best cheater action."
+        game = self.game
+
+        #On tire au hasard un des 3 entiers associés aux actions : #
+        # 1 : discard
+        # 2 : play
+        # 3 : clue
+
+        tmp=rd.randint(1,3)
+
+        return()
