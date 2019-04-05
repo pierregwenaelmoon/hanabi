@@ -131,6 +131,15 @@ class Random(AI):
         # 2 : play
         # 3 : clue
 
-        tmp=rd.randint(1,3)
+        actio=['d','p','c']
+        tmp=rd.randint(0,2)
+        act=actio(tmp)
 
-        return()
+        return(act)
+
+class Safe(AI):
+
+    def play(self):
+        "Return the safest action to do "
+        
+        
