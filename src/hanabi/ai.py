@@ -158,6 +158,7 @@ class Safe(AI):
 
         split_hand=hand.split()
 
+
         #On parcourt la liste de cartes et on indique quelle carte est à jouée en priorité. On ressort de la boucle 
         # avec l'indice de la carte qui est à jouée  : idx_prio. Si pas 2 indices : pas de prio.
 
@@ -178,7 +179,37 @@ class Safe(AI):
         #Si on a un idx_prio !=-1 : on joue cette carte#
 
         if idx_prio!=-1:
-            return('p')
+            #On vérifie tout de même que la carte indiquée est jouable.#
+
+
+            return()# Il faut renvoyer 'jouer la carte à l'idx_i'
+
+        #Si on arrive là c'est qu'on a pas trouvé de cartes avec 2 indices#
+        #On regarde le nombre de pions bleus dans le couvercle de la boite. 
+        # Si il reste des pions : on donne une information #
+
+        nb_blue=game.blue_coins
+        if game.blue_coins>0:
+
+            game.remove_blue_coin()
+            #On va donner un indice#
+            #On donne un indice en fonction de ce qu'il y a sur la table et de ce que l'autre a dans
+            # main.
+
+            adv_hand=self.hands[self.other_player]
+
+            for j in adv_hand:
+                
+
+
+
+
+            return()# Il faut retourner 'donner un indice'
+
+        
+
+
+
 
 
 
