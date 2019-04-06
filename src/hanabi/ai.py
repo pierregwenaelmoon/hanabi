@@ -135,7 +135,7 @@ class Random(AI):
         tmp=rd.randint(0,2)
         act=actio(tmp)
 
-        return(act)
+        return(act) #A verif, normalement le 'play' devrait indiquer quelle carte on joue ? 
 
 class Safe(AI):
 
@@ -199,7 +199,7 @@ class Safe(AI):
             adv_hand=self.hands[self.other_player]
 
             for j in adv_hand:
-                
+
 
 
 
