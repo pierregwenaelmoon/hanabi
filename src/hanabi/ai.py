@@ -141,5 +141,51 @@ class Safe(AI):
 
     def play(self):
         "Return the safest action to do "
+
+        game = self.game
+
+        #Indices possédés dans la main : liste de cartes#
+        hand=self.current_hand.str_clue()
+
+        #Piles sur la table#
+
+        piles_act=self.piles
+
+        #On cherche d'abord si on peut poser une carte#
+        #Si j'ai bien compris : hand = une liste de 1 élément : voir papier pour exemple#
+
+        #On doit donc séparer les différents cartes : 2 cartes sont séparées par un espace#
+
+        split_hand=hand.split()
+
+        #On parcourt la liste de cartes et on indique quelle carte est à jouée en priorité. On ressort de la boucle 
+        # avec l'indice de la carte qui est à jouée  : idx_prio. Si pas 2 indices : pas de prio.
+
+        idx_prio=-1
+
+
+        for i in split_hand :
+
+            #On sépare les 2 indices #
+            split_clues=split_hand[i].split("")
+
+            #On regarde combien d'indices on possède sur chaque carte#
+
+            nb_clues=2-split_clues.count('*')
+            if nb_clues==2:
+                idx_prio=i
+
+        #Si on a un idx_prio !=-1 : on joue cette carte#
+
+        if idx_prio!=-1:
+            return('p')
+
+
+
+
+
+
+
         
         
+
